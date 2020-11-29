@@ -1,3 +1,6 @@
+
+require 'pry'
+
 class Student
   attr_accessor :name, :grade
   attr_reader :id
@@ -39,6 +42,7 @@ class Student
   end 
 
   def self.create(name:, grade:)
+    binding.pry
     student = Student.new(name, grade)
     student.save
     student
